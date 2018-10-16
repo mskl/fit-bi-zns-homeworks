@@ -1,21 +1,20 @@
-IF kolo je pojízdné AND dělá zvuk AND zvuk jde od brzd THEN zvuk brzdy
-IF kolo je pojízdné AND dělá zvuk AND zvuk jde od řetězu THEN zvuk řetěz
+# Klauzule jsou naopak než ve frameworku. Úkoly budu řešit v Pythonu a tento zápis mi připadá přehlednější.
 
-IF zvuk brzdy AND při brždění THEN problém brzdové špalíky
-IF problém brzdové špalíky AND brzdy staré THEN vyměň brzdové špalíky
-IF problém brzdové špalíky AND brzdové špalíky jsou špinavé THEN vyšisti brzdové špalíky
-IF zvuk brzdy AND při jízdě THEN vycentruj kolo
-
-IF zvuk řetěz AND z přední části THEN uprav stavěcí šrouby na předním přesmykači
-IF zvuk řetěz AND ze zadní části THEN uprav stavěcí šrouby na zadním přesmykači
-
-IF kolo není pojízdné AND kolo je prázdné THEN
-IF píchlé kolo AND v plášti je velká viditelná díra THEN je třeba vyměnit plášť i duši
-IF píchlé kolo AND v plášti nic vidět není THEN kontrola duše
-IF kontrola duše AND díra v duši je malých rozměrů THEN použij lepení a zalep duši
-IF kontrola duše AND díra v duše je velká nebo duše uniká ve ventilku THEN je třeba vyměnit duši
-
-IF kolo není pojízdné AND nejde točit pedály THEN řetěz se netočí
-IF řetěz se netočí AND je spadlý THEN nahoď řetěz 
-IF řetěz se netočí AND je ulomená patka přehazovačky THEN vyměň patku přehazovačky
-
+IF nejde točit pedály THEN nahoď spadlý řetěz
+IF kolo prázdné AND plášť není roztržený AND díra není velká THEN použij lepení
+IF kolo prázdné AND plášť není roztržený AND díra v duši je velká nebo uniká ventilek THEN vyměň duši
+IF kolo prázdné AND plášť plášť je roztržený THEN vyměň plášť i duši
+IF zvuk od přehazovačky THEN uprav natažení lanka stavěcím šroubem a řidítkách
+IF řetěz přeskakuje na zadním kolečku THEN uprav stavěcí šroub zadní přehazovačky
+IF řetěz přeskakuje AND řetěz starý AND správně seřízený přesmykač THEN vyměň řetěz
+IF řetěz padá v krajních polohách THEN uprav dorazy stavěcími šrouby
+IF řetěz přetržený AND řetěz nebyl poslední dobou vyměněn THEN snýtuj řetěz
+IF řetěz přetržený AND řetěz ve špatném stavu THEN vyměň řetěz za nový a snýtuj
+IF zvuk při brždění AND staré brzdové špalky THEN vyměň brzdové špalky
+IF zvuk při brždění AND špinavé brzdové špalky THEN umyj brzdové špalky
+IF zvuk při jízdě AND od kola AND v pravidelných intervalech THEN vycentruj kolo
+IF zvuk při jízdě AND od kola AND konstantně THEN kolo není správně zasazeno ve vidlici/rámu
+IF zvuk při jízdě AND od řetězu AND při šlapání AND skřípání THEN promaž řetěz a vodící prvky
+IF brzda nefunguje AND brzda je volná THEN vyměň přetržené brzdové lanko
+IF brzda nefunguje AND brzda klade odpor AND staré brzdové špalky THEN vyměněn brzdové špalky
+IF nefunguje řazení AND řadící lanko je volné THEN vyměň přetržené řadící lanko
