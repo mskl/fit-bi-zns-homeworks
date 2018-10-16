@@ -1,0 +1,21 @@
+IF kolo je pojízdné AND dělá zvuk AND zvuk jde od brzd THEN zvuk brzdy
+IF kolo je pojízdné AND dělá zvuk AND zvuk jde od řetězu THEN zvuk řetěz
+
+IF zvuk brzdy AND při brždění THEN problém brzdové špalíky
+IF problém brzdové špalíky AND brzdy staré THEN vyměň brzdové špalíky
+IF problém brzdové špalíky AND brzdové špalíky jsou špinavé THEN vyšisti brzdové špalíky
+IF zvuk brzdy AND při jízdě THEN vycentruj kolo
+
+IF zvuk řetěz AND z přední části THEN uprav stavěcí šrouby na předním přesmykači
+IF zvuk řetěz AND ze zadní části THEN uprav stavěcí šrouby na zadním přesmykači
+
+IF kolo není pojízdné AND kolo je prázdné THEN
+IF píchlé kolo AND v plášti je velká viditelná díra THEN je třeba vyměnit plášť i duši
+IF píchlé kolo AND v plášti nic vidět není THEN kontrola duše
+IF kontrola duše AND díra v duši je malých rozměrů THEN použij lepení a zalep duši
+IF kontrola duše AND díra v duše je velká nebo duše uniká ve ventilku THEN je třeba vyměnit duši
+
+IF kolo není pojízdné AND nejde točit pedály THEN řetěz se netočí
+IF řetěz se netočí AND je spadlý THEN nahoď řetěz 
+IF řetěz se netočí AND je ulomená patka přehazovačky THEN vyměň patku přehazovačky
+
