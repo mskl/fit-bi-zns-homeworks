@@ -1,14 +1,15 @@
 graph_style = {
     'graph': {
-        #'nodesep': '0',
+        # 'nodesep': '0',
     },
     'nodes': {
         'fontname': 'Helvetica',
+        'shape': 'egg'
     },
     'edges': {
         # 'dir': 'none',
-        #'len': '10',
-        #'weight': '10'
+        # 'len': '10',
+        # 'weight': '10'
     }
 }
 

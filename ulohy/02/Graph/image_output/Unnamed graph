@@ -1,0 +1,16 @@
+// Unnamed graph
+digraph {
+	node [fontname=Helvetica shape=egg]
+	4 [label=C]
+	0 [label=F]
+	1 [label=D]
+	2 -> 1 [label=""]
+	0 -> 1 [label=""]
+	3 [label=B]
+	4 -> 3 [label=""]
+	2 -> 3 [label=""]
+	2 [label=A]
+	5 [label=E]
+	1 -> 5 [label=""]
+	3 -> 5 [label=""]
+}

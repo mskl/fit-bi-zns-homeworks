@@ -6,6 +6,7 @@ if __name__ == "__main__":
 
     g = Graph("Expertní systém opraváře kol")
     for line in content:
+        # Parse the line
         separated = line.strip(" IF ").split(" THEN ")
         if len(separated) == 2:
             conditions = separated[0].split("AND")
