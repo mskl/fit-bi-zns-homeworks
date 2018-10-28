@@ -1,15 +1,19 @@
 from Graph.Graph import Graph
 
-
 if __name__ == "__main__":
     g = Graph()
-    g.add_edge(id_a="F", id_b="D")
     g.add_edge(id_a="A", id_b="D")
     g.add_edge(id_a="A", id_b="B")
     g.add_edge(id_a="C", id_b="B")
     g.add_edge(id_a="B", id_b="E")
     g.add_edge(id_a="D", id_b="E")
+    g.add_edge(id_a="F", id_b="D")
+
+    #g.remove_node("F")
+    g.remove_node_and_descendants("F")
 
     print(g)
-    g.remove_node("F")
-    print(g)
+    #print(g.get_node_from_string("A").edges_in)
+    #print(g.get_node_from_string("A").edges_out)
+
+    g.graphviz_draw()

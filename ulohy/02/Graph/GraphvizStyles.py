@@ -15,13 +15,20 @@ graph_style = {
 
 
 def apply_styles(graph, styles):
+    """
+    Apply all styles that graphviz has at once.
+    :param graph: target graphviz graph
+    :param styles: style dict
+    :type styles: dict
+    :return: graphviz graph with applied styles
+    """
     graph.graph_attr.update(
-        ('graph' in styles and styles[ 'graph' ]) or {}
+        ('graph' in styles and styles['graph']) or {}
     )
     graph.node_attr.update(
-        ('nodes' in styles and styles[ 'nodes' ]) or {}
+        ('nodes' in styles and styles['nodes']) or {}
     )
     graph.edge_attr.update(
-        ('edges' in styles and styles[ 'edges' ]) or {}
+        ('edges' in styles and styles['edges']) or {}
     )
     return graph
