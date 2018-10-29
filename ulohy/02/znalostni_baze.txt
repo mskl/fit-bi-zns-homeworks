@@ -1,20 +1,21 @@
-IF nejde točit pedály AND řetěz neleží na ozubených kolečkách THEN nahoď spadlý řetěz
-IF kolo prázdné AND plášť není roztržený THEN píchnutá duše
-IF píchnutá duše AND díra není velká THEN použij lepení
-IF píchnutá duše AND díra v duši je velká nebo uniká ventilek THEN vyměň duši
-IF kolo prázdné AND plášť je roztržený THEN vyměň plášť i duši
-IF zvuk od přehazovačky AND při šlapání THEN uprav natažení lanka stavěcím šroubem na řidítkách
-IF řetěz přeskakuje THEN uprav stavěcí šroub přehazovačky
-IF řetěz přeskakuje AND řetěz starý AND správně seřízený přesmykač THEN vyměň řetěz
-IF řetěz padá v krajních polohách THEN uprav dorazy stavěcími šrouby
-IF řetěz přetržený AND řetěz nebyl poslední dobou vyměněn THEN snýtuj řetěz
-IF řetěz přetržený AND řetěz ve špatném stavu THEN vyměň řetěz za nový a snýtuj
-IF zvuk při brždění AND staré brzdové špalky THEN vyměň brzdové špalky
-IF zvuk při brždění AND špinavé brzdové špalky THEN umyj brzdové špalky
-IF zvuk při jízdě AND od kola THEN jedno z kol dělá zvuk
-IF jedno z kol dělá zvuk AND v pravidelných intervalech THEN vycentruj kolo
-IF jedno z kol dělá zvuk AND konstantně THEN kolo není správně zasazeno ve vidlici/rámu
-IF zvuk při jízdě AND od řetězu AND při šlapání AND skřípání THEN promaž řetěz a vodící prvky
-IF brzda nefunguje AND brzda je volná THEN vyměň přetržené brzdové lanko
-IF brzda nefunguje AND brzda klade odpor AND staré brzdové špalky THEN vyměněn brzdové špalky
-IF nefunguje řazení AND řadící lanko je volné THEN vyměň přetržené řadící lanko
+# IF nejde točit pedály AND řetěz neleží na ozubených kolečkách THEN nahoď spadlý řetěz
+IF kolo je prázdné THEN duše je píchnutá
+IF duše je píchnutá AND v plášti je trhlina THEN je potřeba vyměnit plášť a koupit novou duši
+IF duše je píchnutá AND v plášti není trhlina THEN problém duše
+IF problém duše AND díra velká nebo uniká ventilek THEN kup novou duši
+IF problém duše AND díra je menší než záplata THEN zalep duši
+# IF je slyšet zvuk od přehazovačky AND při šlapání THEN uprav natažení lanka stavěcím šroubem na řidítkách
+# IF řetěz přeskakuje THEN uprav stavěcí šroub přehazovačky
+# IF řetěz přeskakuje AND řetěz je starý AND přesmykač je správně seřízený THEN vyměň řetěz
+# IF řetěz padá v krajních polohách THEN uprav dorazy stavěcími šrouby
+# IF řetěz přetržený AND řetěz nebyl poslední dobou vyměněn THEN snýtuj řetěz
+# IF řetěz přetržený AND řetěz je ve špatném stavu THEN vyměň řetěz za nový a snýtuj
+# IF zvuk při brždění AND brzdové špalky jsou staré THEN vyměň brzdové špalky
+# IF zvuk při brždění AND brzdové špalky jsou špinavé THEN umyj brzdové špalky
+# IF zvuk je slyšet při jízdě AND zvuk jde od kola THEN jedno z kol dělá zvuk
+# IF jedno z kol dělá zvuk AND zvuk je slyšet v pravidelných intervalech THEN vycentruj kolo
+# IF jedno z kol dělá zvuk AND zvuk je slyšet konstantně THEN kolo není správně zasazeno ve vidlici/rámu
+# IF zvuk je slyšet při jízdě AND zvuk od řetězu AND zvuk při šlapání AND skřípání THEN promaž řetěz a vodící prvky
+# IF brzda nefunguje AND brzda je volná THEN vyměň přetržené brzdové lanko
+# IF brzda nefunguje AND brzda klade odpor AND brzdové špalky jsou staré THEN vyměněn brzdové špalky
+# IF nefunguje řazení AND řadící lanko je volné THEN vyměň přetržené řadící lanko

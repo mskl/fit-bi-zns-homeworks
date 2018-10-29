@@ -1,9 +1,14 @@
 // Unnamed graph
 digraph {
 	node [fontname=Helvetica shape=egg]
-	3 [label=C]
-	3 -> 2 [label=""]
-	0 [label=A]
-	0 -> 2 [label=""]
-	2 [label=B]
+	4 [label=F]
+	4 -> 3 [label=""]
+	5 [label=E]
+	5 -> 3 [label=""]
+	6 [label=Z]
+	7 [label=X]
+	7 -> 8 [label=""]
+	8 [label=Y]
+	3 [label=D]
+	3 -> 6 [label=""]
 }

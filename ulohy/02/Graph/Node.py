@@ -9,7 +9,7 @@ class Node:
         """
         self.edges_out = set()
         self.edges_in = set()
-        self.value = None
+        self.height = 0
         self.name = name
         self.__id = id
 
@@ -34,6 +34,29 @@ class Node:
                 to_remove_out.append(e)
         for d in to_remove_out:
             self.edges_out.remove(d)
+
+    def calculate_height(self):
+        """
+        Recursively calculate the maximum distance to any leaf.
+        :return: height value
+        :rtype: int
+        """
+        for e in self.edges_out:
+            n = e.other(self)
+            self.height = max(n.calculate_height(), self.height)
+        return self.height + 1
+
+    def get_solution(self):
+        """
+        Recursively find any (only) leaf.
+        :rtype: Node
+        :return: any leaf
+        """
+        if len(self.edges_out) > 1 or len(self.edges_in) > 1:
+            return None
+        for e in self.edges_out:
+            return e.other(self).get_solution()
+        return self
 
     def __id__(self):
         """

@@ -16,6 +16,13 @@ class Graph:
         self.__creation_node_counter = 0
         self.__creation_edge_counter = 0
 
+    def calculate_max_heights(self):
+        """
+        Calculate the maximum distance to a leaf that the node has.
+        """
+        for i in self.nodes:
+            i.calculate_height()
+
     def __add_node(self, name):
         """
         Adds a node. The id is generated automatically.
@@ -27,11 +34,13 @@ class Graph:
         self.__creation_node_counter = self.__creation_node_counter + 1
         return new_node
 
-    def get_node(self, node):
+    def get_node(self, node, create=True):
         """
         Get a node from the given string.
         :param node: node or name of the node
+        :param create: node should be created if missing
         :type node: Node | str
+        :type create: bool
         :return: a new node if it does not exist
         :rtype Node
         """
@@ -42,9 +51,52 @@ class Graph:
             for v in self.nodes:
                 if v.name == node:
                     return v
-            return self.__add_node(node)
+            if create:
+                return self.__add_node(node)
+            else:
+                raise ValueError("Creation blocked.")
         else:
             raise KeyError("Unknown node type")
+
+    def get_subgraph(self, node):
+        """
+        Get a set of nodes that are in the same subgraph as the current node.
+        :param node: node that needs to be searched
+        :type node: Node | str
+        :return: set of the nodes in the same subgraph
+        :rtype: set of Node
+        """
+        # get the node from the name
+        node = self.get_node(node, create=False)
+
+        visited = set()
+        unvisited = set()
+
+        # add the starting node
+        unvisited.add(node)
+
+        while unvisited:
+            n = unvisited.pop()
+            visited.add(n)
+            for e_o in n.edges_out:
+                o = e_o.other(n)
+                if o not in visited:
+                    unvisited.add(o)
+            for e_i in n.edges_in:
+                i = e_i.other(n)
+                if i not in visited:
+                    unvisited.add(i)
+
+        return visited
+
+    def remove_nodes(self, nodes):
+        """
+        Removes all given nodes from graph and their edges.
+        :param nodes: iterable collection of nodes
+        :type nodes: set
+        """
+        for n in nodes:
+            self.remove_node(n)
 
     def remove_node(self, node):
         """
@@ -52,7 +104,7 @@ class Graph:
         :param node: Node to be deleted. Either node or a string
         """
         # find the node if passed a string
-        node = self.get_node(node)
+        node = self.get_node(node, create=False)
 
         for e in node.edges_in:
             other_node = e.other(node)
@@ -68,21 +120,55 @@ class Graph:
         self.nodes.remove(node)
         del node
 
-    def remove_node_and_descendants(self, node):
+    def remove_ancestor_branch(self, node):
         """
-        Recursively delete the node and it's descendants.
+        Recursively remove ancestors on a branch if they have only one output.
+        :type node: Node | str
+        """
+        node = self.get_node(node, create=False)
+
+        if len(node.edges_out) == 1:
+            ancestors = []
+            for e_in in node.edges_in:
+                other_node = e_in.other(node)
+                ancestors.append(other_node)
+            for n in ancestors:
+                self.remove_ancestor_branch(n)
+            self.remove_node(node)
+
+    def remove_node_and_descendants(self, node, ancestors, direct, node_from=None):
+        """
+        Recursively delete the node and it's descendants if they have only one input.
         :param node: node or name of a node
-        :return:
+        :param node_from: previous node
+        :param ancestors: true to remove the single ancestor branch
+        :type node: Node | str
+        :type ancestors: bool
+        :type node_from: Node | str
         """
-        if isinstance(node, str):
-            node = self.get_node(node)
+        node = self.get_node(node)
 
         other_nodes = []
         for e in node.edges_out:
-            other_nodes.append(e.other(node))
+            other_node = e.other(node)
+            # remove only if it has 1 input, else it might be useful
+            if direct:
+                if len(other_node.edges_in) == 1:
+                    other_nodes.append(other_node)
+            else:
+                other_nodes.append(other_node)
 
         for n in other_nodes:
-            self.remove_node_and_descendants(n)
+            self.remove_node_and_descendants(n, ancestors, direct, node)
+
+        # remove also the unsolvable branches up
+        if ancestors:
+            ancestor_nodes = []
+            for i in node.edges_in:
+                if not i.contains(node_from):
+                    ancestor_nodes.append(i.other(node))
+            for n in ancestor_nodes:
+                self.remove_ancestor_branch(n)
 
         self.remove_node(node)
 
@@ -105,22 +191,22 @@ class Graph:
         a.edges_out.add(new_edge)
         b.edges_in.add(new_edge)
 
-    def graphviz_draw(self, view=True):
+    def graphviz_draw(self, preview=True):
         """
         Draw the graph using the Graphviz graphing library.
         :param view: Show the generated graph.
         :type view: bool
         """
-        dot = Digraph(comment=self.name, format="pdf")
+        dot = Digraph(comment=self.name, format="pdf") # pdf
         for node in self.nodes:
             dot.node(str(node.get_id()), str(node.name))
             for edge in node.edges_out:
                 other_node = edge.other(node)
                 dot.edge(str(node.get_id()), str(other_node.get_id()), str(edge.get_value()))
 
-        print(dot.source)
+        # print(dot.source)
         apply_styles(dot, graph_style)
-        dot.render('image_output/%s' % self.name, view=view)
+        dot.render("znalostni_baze", view=preview, cleanup=True)
 
     def __str__(self):
         """
