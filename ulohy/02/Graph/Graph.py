@@ -95,7 +95,10 @@ class Graph:
         :param nodes: iterable collection of nodes
         :type nodes: set
         """
+        to_remove = []
         for n in nodes:
+            to_remove.append(n)
+        for n in to_remove:
             self.remove_node(n)
 
     def remove_node(self, node):
@@ -118,7 +121,6 @@ class Graph:
 
         # remove global node and delete the object
         self.nodes.remove(node)
-        del node
 
     def remove_ancestor_branch(self, node):
         """
@@ -191,7 +193,7 @@ class Graph:
         a.edges_out.add(new_edge)
         b.edges_in.add(new_edge)
 
-    def graphviz_draw(self, preview=True):
+    def graphviz_draw(self, preview=True, name="znalostni_baze"):
         """
         Draw the graph using the Graphviz graphing library.
         :param view: Show the generated graph.
@@ -206,7 +208,16 @@ class Graph:
 
         # print(dot.source)
         apply_styles(dot, graph_style)
-        dot.render("znalostni_baze", view=preview, cleanup=True)
+        dot.render(name, view=preview, cleanup=True)
+
+    def print_nice(self):
+        """
+        Nicely print the graph.
+        """
+        self.nodes = sorted(self.nodes, key=(lambda x: (x.height, len(x.edges_out))), reverse=True)
+        for v in self.nodes:
+            for e in v.edges_out:
+                e.print_nice()
 
     def __str__(self):
         """

@@ -73,6 +73,12 @@ class Edge:
         """
         return "e_id=" + str(self.__id) + " e_value=" + str(self.__edge_value)
 
+    def print_nice(self):
+        """
+        Nicely print the current edge.
+        """
+        print("- " + str(self.__node_a.name) + " -> " + str(self.__node_b.name))
+
     def __str__(self):
         """
         Describe the current edge.
