@@ -90,12 +90,13 @@ class ChatBot:
             print("Z nich vyplývá, že: ")
             for i in self.implied_true:
                 print("-", i.name)
-        print("Jsou celkem {} otázky, které mohou pomoci posunout se dál. Top {} z nich jsou: "\
-            .format(len(current_data), min(len(current_data), 3)))
+        print("Jsou celkem {} otázky, které mohou pomoci posunout se dál. Top {} z nich jsou: " \
+              .format(len(current_data), min(len(current_data), 3)))
         for n in range(0, min(len(current_data), 3)):
             print("-", current_data[n].name)
         # possible improvement = count children
-        print("Vybral jsem \"{}\" protože je na nejvyšším místě v grafu ({}) a její zodpovězení může odebrat {} přímých nejasností."\
+        print(
+            "Vybral jsem \"{}\" protože je na nejvyšším místě v grafu ({}) a její zodpovězení může odebrat {} přímých nejasností." \
             .format(current_data[0].name, current_data[0].height, len(current_data[0].edges_out)))
 
     def _explain(self, solution):
@@ -132,7 +133,7 @@ class ChatBot:
 
         # ask for the node with the highest priority .. sorted by (height, num of outgoing edges)
         selected = current_data[0]
-        response = self._post_question("Je pravda, že \"" + selected.name + "\"? [y/n/w]: ")
+        response = self._post_question("Je pravda, že \"" + selected.name + "\"? [y/n/w/0-1]: ")
 
         """ Actions based on the response of the user: """
         if response == "y":
@@ -181,8 +182,21 @@ class ChatBot:
         elif response == "w":
             self._why(current_data)
 
+        elif response == "s":
+            self.data_graph.graphviz_draw()
+
         else:
-            self._post_answer("Neznámá odpověď.")
+            # number between 0-1
+            try:
+                response_num = float(response)
+
+                if not (0 <= response_num <= 1):
+                    self._post_answer("Zadané číslo není z intervalu <0, 1>.")
+
+
+
+            except ValueError:
+                self._post_answer("Neznámá odpověď.")
 
         return False
 
@@ -191,14 +205,10 @@ if __name__ == "__main__":
     """
     Run the bot. 
     """
-    print("Znalostní systém opraváře kol nastartován.")
-
+    print("Bayesův znalostní systém opraváře kol nastartován.")
     c = ChatBot()
-    # c.data_graph.graphviz_draw()
 
     while not c.ask():
         pass
-        # c.data_graph.graphviz_draw()
 
     print("Konec programu.")
-
