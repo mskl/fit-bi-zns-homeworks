@@ -1,4 +1,5 @@
 from Graph.Graph import Graph
+import sys
 
 
 class ChatBot:
@@ -16,9 +17,16 @@ class ChatBot:
 
         self.current_subgraph = set()
 
+        self.explanations = []
+
+        self.user_input = True
+        if len(sys.argv) == 2:
+            self.user_input = False
+            self.lines = open(sys.argv[1]).read().splitlines()
+
     def _load_data(self):
         """
-        Load the data from the knowledge base file and parse the clausules.
+        Load the data from the knowledge base file and parse the clauses.
         """
         with open("znalostni_baze.txt") as f:
             content = f.readlines()
@@ -30,9 +38,15 @@ class ChatBot:
             separated = line.strip(" IF ").split(" THEN ")
             if len(separated) == 2:
                 conditions = separated[0].split("AND")
-                solution = separated[1]
+                solution_name = separated[1].split("|")[0]
+                p_h = float(separated[1].split("|")[1].strip("\n "))
                 for cond in conditions:
-                    data_graph.add_edge(cond.strip(), solution.strip(), "")
+                    cond_name = cond.split("|")[0]
+                    probabilities = cond.split("|")[1].split("->")
+                    p_e = float(probabilities[0])
+                    p_he = float(probabilities[1])
+
+                    data_graph.add_edge(cond_name.strip(), solution_name.strip(), value=p_he, a_value=p_e, b_value=p_h)
         return data_graph
 
     def _initialise_data(self):
@@ -56,7 +70,7 @@ class ChatBot:
             if len(node.edges_in) == 0:
                 node_sources.append(node)
 
-        node_sources.sort(reverse=True, key=lambda n: (len(n.edges_out), n.height))
+        node_sources.sort(reverse=True, key=lambda n: (len(n.edges_out), n.height, n.name))
         return node_sources
 
     def _post_question(self, question):
@@ -68,7 +82,12 @@ class ChatBot:
         :rtype: str
         """
         self.messages_sent.append(question)
-        return input(question)
+        if self.user_input:
+            return input(question)
+        else:
+            ans = self.lines.pop(0)
+            print(question + ans)
+            return ans
 
     def _post_answer(self, answer):
         """
@@ -103,21 +122,59 @@ class ChatBot:
         """
         Explain how i got to the current solution.
         """
+        # Get the whole data
+        whole_graph = ChatBot()
+
+        # all nodes that were marked as true either by user or implied
         all_true = self.implied_true.union(self.answered_true).union(self.current_subgraph)
 
-        # recalculate all data
-        self.data_graph = self._initialise_data()
-
         # get the nodes that were not used
-        unused = all_true.symmetric_difference(self.data_graph.nodes)
+        unused = all_true.symmetric_difference(whole_graph.data_graph.nodes)
 
         # remove the unused nodes from graph
-        self.data_graph.remove_nodes(unused)
+        whole_graph.data_graph.remove_nodes(unused)
 
-        # print the remaining graph:
-        print("Řešení bylo odvozeno od následujícího průchodu grafem: ")
-        self.data_graph.graphviz_draw("Solution to:", solution.name)
-        self.data_graph.print_nice()
+        return [solution, whole_graph]
+
+    def _final_explain(self, deep=False):
+        if not deep:
+            response = self._post_question("Zobrazit všecha řešení " + str(len(self.explanations)) + " řešení? [y/*]: ")
+            if response == "y":
+                limit = len(self.explanations)
+                print("Zobrazuji všech", len(self.explanations), "řešení.")
+            else:
+                limit = 2
+                print("Zobrazuji nejlepší 2 řešení.")
+        else:
+            limit = len(self.explanations)
+
+        # sum all probabilities
+        prob_sum = 0
+        for i in range(0, len(self.explanations)):
+            prob_sum += self.explanations[i][0].ziskej_finalni_pst()
+
+        # add recalculated probabilities
+        for i in range(0, len(self.explanations)):
+            self.explanations[i].append(self.explanations[i][0].ziskej_finalni_pst() / prob_sum)
+
+        # sort the recalculated probabilities
+        self.explanations.sort(key=lambda x: x[2], reverse=True)
+
+        # print all probabilities
+        for i in range(0, max(len(self.explanations), limit)):
+            print("Řešení", str(i) + ":", self.explanations[i][0].name, "s pravděpodobností:",
+                  round(self.explanations[i][2], 5))
+
+            if deep:
+                self.explanations[i][1].data_graph.graphviz_draw("Solution to:", self.explanations[i][0].name)
+                self.explanations[i][1].data_graph.print_nice()
+
+    def end_bot(self):
+        self._final_explain()
+
+        res = self._post_question("Chceš vysvětlit, jak jsem došel k těmto závěrům? [y/*]: ")
+        if res == "y":
+            self._final_explain(deep=True)
 
     def ask(self):
         """
@@ -133,10 +190,27 @@ class ChatBot:
 
         # ask for the node with the highest priority .. sorted by (height, num of outgoing edges)
         selected = current_data[0]
-        response = self._post_question("Je pravda, že \"" + selected.name + "\"? [y/n/w/0-1]: ")
+        response = self._post_question("Je pravda, že \"" + selected.name + "\"? [y/n/w/(0-1)]: ")
+
+        # Check for numerical response
+        response_num = None
+        if response not in ["y", "w", "s", "n"]:
+            try:
+                response_num = float(response)
+
+                if not (0 < response_num <= 1):
+                    self._post_answer("Zadané číslo není z intervalu (0, 1>.")
+                    return False
+            except ValueError:
+                self._post_answer("Neznámá odpověď.")
+                return False
 
         """ Actions based on the response of the user: """
-        if response == "y":
+        if response == "y" or response_num is not None:
+            # not defining value is like answering with 1
+            if response_num is None:
+                response_num = 1
+
             # specialize on the current subgraph
             self.current_subgraph = self.data_graph.get_subgraph(selected)
             implied = self.current_subgraph.copy()
@@ -144,40 +218,40 @@ class ChatBot:
             # check if this node led to a solution
             solution = selected.get_solution()
             if solution is not None:
-                print("Řešení:", solution.name)
-                response = self._post_question("Chceš vysvětlit proč? [y/*]: ")
-                if response == "y":
-                    self._explain(solution)
-                return True
+                print("= Found a solution", solution.name)
+                self.explanations.append(self._explain(solution))
 
             # traverse the graph and remove all descendants which do not rely only on this node
-            self.data_graph.remove_node_and_descendants(selected, ancestors=False, direct=True)
+            self.data_graph.remove_node_and_descendants(node=selected, ancestors=False, direct=True, node_from=None,
+                                                        user_prob=response_num)
 
             # remove current node and all implied descendants from the subgraph
             intersection = self.current_subgraph.intersection(self.data_graph.nodes)
             self.current_subgraph = intersection
 
-            # delete all remaining nodes that are not in the current subgraph from the whole graph
-            diff = self.data_graph.nodes.difference(self.current_subgraph)
-            self.data_graph.remove_nodes(diff)
-
             # add the implied nodes and the answered node
-            implied = implied.symmetric_difference(self.current_subgraph)
-            implied.remove(selected)
-            self.answered_true.add(selected)
-            self.implied_true = self.implied_true.union(implied)
+            if solution is None:
+                implied = implied.symmetric_difference(self.current_subgraph)
+                implied.remove(selected)
+                self.answered_true.add(selected)
+                self.implied_true = self.implied_true.union(implied)
+
+            if len(self.current_subgraph) == 0 and len(self.data_graph.nodes) == 0:
+                self.end_bot()
+                return True
 
         elif response == "n":
             # remove only the
-            self.data_graph.remove_node_and_descendants(selected, ancestors=True, direct=False)
+            self.data_graph.remove_node_and_descendants(node=selected, ancestors=True, direct=False, node_from=None, user_prob=None)
 
             # update the currently selected set to reflect the removed nodes
             self.current_subgraph = self.current_subgraph.intersection(self.data_graph.nodes)
 
             # check if there are any nodes left in the graph
             if len(self.data_graph.nodes) == 0:
-                self._post_answer("Neznám řešení tvého problému.")
-                return True
+                if len(self.explanations) == 0:
+                    self._post_answer("Neznám řešení tvého problému.")
+                    return True
 
         elif response == "w":
             self._why(current_data)
@@ -186,27 +260,19 @@ class ChatBot:
             self.data_graph.graphviz_draw()
 
         else:
-            # number between 0-1
-            try:
-                response_num = float(response)
-
-                if not (0 <= response_num <= 1):
-                    self._post_answer("Zadané číslo není z intervalu <0, 1>.")
-
-
-
-            except ValueError:
-                self._post_answer("Neznámá odpověď.")
+            self._post_answer("Neznámá odpověď.")
 
         return False
 
 
 if __name__ == "__main__":
-    """
-    Run the bot. 
-    """
     print("Bayesův znalostní systém opraváře kol nastartován.")
-    c = ChatBot()
+
+    try:
+        c = ChatBot()
+    except Exception as e:
+        print("Inicialization of the chatbot failed with the error of:", str(e))
+        exit(0)
 
     while not c.ask():
         pass

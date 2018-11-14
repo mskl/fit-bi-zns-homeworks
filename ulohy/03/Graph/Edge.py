@@ -77,7 +77,8 @@ class Edge:
         """
         Nicely print the current edge.
         """
-        print("- " + str(self.__node_a.name) + " -> " + str(self.__node_b.name))
+        print("- " + str(self.__node_a.name) + " (" + self.__node_a.get_value_string() +
+              ") -> " + str(self.__node_b.name) + " (" + self.__node_b.get_value_string() + ")")
 
     def __str__(self):
         """

@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a28c99c-3fb2-4397-a317-653df4fd26c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02/Inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02/Inference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../znalostni_baze.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/matya.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Eperiments-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Eperiments-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BayesInference.py" beforeDir="false" afterPath="$PROJECT_DIR$/BayesInference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eperiments.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eperiments.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graph/Edge.py" beforeDir="false" afterPath="$PROJECT_DIR$/Graph/Edge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graph/Graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/Graph/Graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graph/Node.py" beforeDir="false" afterPath="$PROJECT_DIR$/Graph/Node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/znalostni_baze.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/znalostni_baze.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/znalostni_baze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/znalostni_baze.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +20,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/03$PyRun.coverage" NAME="PyRun Coverage Results" MODIFIED="1542043543709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/03$Node.coverage" NAME="Node Coverage Results" MODIFIED="1542161279846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Graph" />
+    <SUITE FILE_PATH="coverage/03$PyRun.coverage" NAME="PyRun Coverage Results" MODIFIED="1542161578954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1666866323">
@@ -26,27 +33,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="md" value="1" />
+          <entry key="py" value="7" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1" />
+          <entry key="Python" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
-          <entry key="py" value="218" />
-          <entry key="txt" value="181" />
+          <entry key="py" value="5556" />
+          <entry key="txt" value="650" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="184" />
-          <entry key="Python" value="218" />
+          <entry key="PLAIN_TEXT" value="653" />
+          <entry key="Python" value="5556" />
         </counts>
       </usages-collector>
     </session>
@@ -59,8 +68,49 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BayesInference.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="195" selection-start-line="195" selection-end-line="195" />
+            <state relative-caret-position="410">
+              <caret line="220" column="30" lean-forward="true" selection-start-line="220" selection-start-column="30" selection-end-line="220" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+                <marker date="1542161605512" expanded="true" signature="6175:6372" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graph/Graph.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="157" selection-start-line="157" selection-end-line="157" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graph/Edge.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graph/Node.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+              <folding>
+                <marker date="1542161290667" expanded="true" signature="473:568" ph="..." />
+                <marker date="1542161290667" expanded="true" signature="599:604" ph="..." />
+                <marker date="1542161290667" expanded="true" signature="786:840" ph="..." />
+                <marker date="1542161290667" expanded="true" signature="1064:1455" ph="..." />
+                <marker date="1542161290667" expanded="true" signature="3183:3706" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,13 +118,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/znalostni_baze.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="420">
+              <caret line="28" column="116" selection-start-line="28" selection-start-column="116" selection-end-line="28" selection-end-column="116" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Neznám řešení tvého problému</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -82,7 +137,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Graph/Graph.py" />
         <option value="$PROJECT_DIR$/znalostni_baze.txt" />
+        <option value="$PROJECT_DIR$/Graph/Node.py" />
+        <option value="$PROJECT_DIR$/Graph/Edge.py" />
         <option value="$PROJECT_DIR$/BayesInference.py" />
       </list>
     </option>
@@ -140,7 +198,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.PyRun">
+    <configuration name="Node" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Graph" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Graph/Node.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="PyRun" type="PythonConfigurationType" factoryName="Python">
       <module name="03" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,6 +243,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.PyRun" />
+      <item itemvalue="Python.Node" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Node" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -179,9 +268,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" sideWeight="0.50190115" side_tool="true" weight="0.24964234" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -189,9 +279,10 @@
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3120482" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3120482" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -210,17 +301,67 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-336" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/graphviz/dot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="121" column="53" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/znalostni_baze.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="420">
+          <caret line="28" column="116" selection-start-line="28" selection-start-column="116" selection-end-line="28" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/Node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+          <folding>
+            <marker date="1542161290667" expanded="true" signature="473:568" ph="..." />
+            <marker date="1542161290667" expanded="true" signature="599:604" ph="..." />
+            <marker date="1542161290667" expanded="true" signature="786:840" ph="..." />
+            <marker date="1542161290667" expanded="true" signature="1064:1455" ph="..." />
+            <marker date="1542161290667" expanded="true" signature="3183:3706" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/Edge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/Graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BayesInference.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="195" selection-start-line="195" selection-end-line="195" />
+        <state relative-caret-position="410">
+          <caret line="220" column="30" lean-forward="true" selection-start-line="220" selection-start-column="30" selection-end-line="220" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1542161605512" expanded="true" signature="6175:6372" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

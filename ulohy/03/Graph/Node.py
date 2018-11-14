@@ -7,11 +7,51 @@ class Node:
         :param name: name of the node
         :type name: str
         """
+        self.__id = id
         self.edges_out = set()
         self.edges_in = set()
         self.height = 0
         self.name = name
-        self.__id = id
+
+        # bayes system variables
+        self.p = None      # probability
+        self.Ls_ = []   # Array of L'
+
+    def O(self, p):
+        return p / (1 - p)
+
+    def P(self, o):
+        return o / (1 + o)
+
+    def L_(self, p_he_, p_h):
+        return self.O(p_he_) / self.O(p_h)
+
+    def add_L(self, p_e, p_he, user_prob):
+        p_h = self.p
+        p_eh = self.P_HE_(p_e=p_e, p_h=self.p, p_he=p_he, user_prob=user_prob)
+        self.Ls_.append(self.L_(p_eh, p_h=p_h))
+
+    def nasobek_sanci(self, p_h, sance_):
+        o_h = self.O(p_h)
+        for s in sance_:
+            o_h *= s
+        return o_h
+
+    def ziskej_finalni_pst(self):
+        return self.P(self.nasobek_sanci(self.p, self.Ls_))
+
+    def P_HE_(self, p_e, p_h, p_he, user_prob):
+        """
+        returns: p_he_
+        """
+        p_hxe = 0
+
+        if 0 <= user_prob <= p_e:
+            return p_hxe + ((p_h - p_hxe) / p_e) * user_prob
+        elif p_e <= user_prob <= 1:
+            return p_h + ((p_he - p_h) / (1 - p_e)) * (user_prob - p_e)
+        else:
+            raise ValueError("p_ee_ is out of range")
 
     def remove_edges_containing(self, node):
         """
@@ -72,6 +112,24 @@ class Node:
         :rtype: int
         """
         return self.__id
+
+    def get_value_string(self):
+        """
+        Get the value of the node in a string format.
+        :rtype: str
+        :return: node value
+        """
+        rstring = ""
+        if self.p is not None:
+            rstring += "p: " + str(self.p)
+        if len(self.Ls_) != 0:
+            if rstring is not None:
+                rstring += " | "
+            rstring += "Ls_: "
+            for i in self.Ls_:
+                rstring += str(i) + ", "
+        rstring += " | calculated: " + str(self.ziskej_finalni_pst())
+        return rstring
 
     def __str__(self):
         """

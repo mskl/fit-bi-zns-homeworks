@@ -138,23 +138,31 @@ class Graph:
                 self.remove_ancestor_branch(n)
             self.remove_node(node)
 
-    def remove_node_and_descendants(self, node, ancestors, direct, node_from=None):
+    def remove_node_and_descendants(self, node, ancestors, direct, node_from=None, user_prob=None):
         """
         Recursively delete the node and it's descendants if they have only one input.
+        :param direct: remove only direct branch
+        :param user_prob: probability given by the user (or 1)
         :param node: node or name of a node
         :param node_from: previous node
         :param ancestors: true to remove the single ancestor branch
-        :type node: Node | str
-        :type ancestors: bool
-        :type node_from: Node | str
+        :type node: Node
         """
         node = self.get_node(node)
 
         other_nodes = []
         for e in node.edges_out:
             other_node = e.other(node)
-            # remove only if it has 1 input, else it might be useful
+
+            if user_prob is not None:
+                other_node.add_L(p_e=node.p, p_he=e.get_value(), user_prob=user_prob)
+
+            # solve if middle node or last
+            if len(other_node.edges_in) == 1:
+                other_node.p = other_node.ziskej_finalni_pst()
+
             if direct:
+                # remove only if it has 1 input, else it might be useful
                 if len(other_node.edges_in) == 1:
                     other_nodes.append(other_node)
             else:
@@ -164,6 +172,7 @@ class Graph:
             self.remove_node_and_descendants(n, ancestors, direct, node)
 
         # remove also the unsolvable branches up
+        # no need to recalculate probability
         if ancestors:
             ancestor_nodes = []
             for i in node.edges_in:
@@ -175,15 +184,23 @@ class Graph:
         self.remove_node(node)
 
     # Add an edge either from two nodes of from two strings
-    def add_edge(self, id_a, id_b, value=""):
+    def add_edge(self, id_a, id_b, value="", a_value=None, b_value=None):
         """
         Adds an edge and automatically creates a node if it does not exist.
         :param id_a: Node or name of a new node (source)
         :param id_b: Node or name of a new node (destination)
         :param value: Value of the edge
+        :param b_value: value to be assigned to node a
+        :param a_value: value to be assigned to node b
         """
         a = self.get_node(id_a)
         b = self.get_node(id_b)
+
+        # update the values of nodes if given
+        if a_value is not None:
+            a.p = a_value
+        if b_value is not None:
+            b.p = b_value
 
         # Create a new edge
         new_edge = Edge(a, b, self.__creation_edge_counter, value)
@@ -196,12 +213,13 @@ class Graph:
     def graphviz_draw(self, preview=True, name="znalostni_baze"):
         """
         Draw the graph using the Graphviz graphing library.
-        :param view: Show the generated graph.
-        :type view: bool
+        :param name: name of the generated file and graph
+        :param preview: Show the generated graph.
+        :type preview: bool
         """
-        dot = Digraph(comment=self.name, format="pdf") # pdf
+        dot = Digraph(comment=self.name, format="pdf")
         for node in self.nodes:
-            dot.node(str(node.get_id()), str(node.name))
+            dot.node(str(node.get_id()), str(node.name), _attributes={"xlabel": node.get_value_string()})
             for edge in node.edges_out:
                 other_node = edge.other(node)
                 dot.edge(str(node.get_id()), str(other_node.get_id()), str(edge.get_value()))
