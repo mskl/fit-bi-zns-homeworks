@@ -1,3 +1,22 @@
+##################################
+# Pro testovací účely je nadefinovaný jen malý subset dat který řeší původ zvuku na kole.
+# Pravidla jsou ve tvaru:
+# IF (podminka_1 | p_e_1 -> p_he_1) AND (podminka_2 | p_e_2 -> p_he_2),.. THEN (vysledek | p_h)
+
+#### zvuky
+IF kolo vydává zvuk | 0.7 -> 0.1 AND zvuk při jízdě | 0.4 -> 0.1 AND zvuk jde od šlapacího středu | 0.1 -> 0.9 THEN promaž nebo vyměň ložiska ve šlapacím středu | 0.1
+IF kolo vydává zvuk | 0.7 -> 0.2 AND zvuk při brždění | 0.6 -> 0.4 AND brzdové špalky jsou staré | 0.3 -> 0.8 THEN vyměň brzdové špalky | 0.15
+IF kolo vydává zvuk | 0.7 -> 0.4 AND zvuk při brždění | 0.6 -> 0.8 AND brzdové špalky jsou špinavé | 0.4 -> 0.6 THEN umyj brzdové špalky | 0.75
+IF kolo vydává zvuk | 0.7 -> 0.6 AND zvuk při jízdě | 0.4 -> 0.6 AND zvuk jde od kola | 0.8 -> 0.9 THEN jedno z kol dělá zvuk | 0.40
+IF kolo vydává zvuk | 0.7 -> 0.5 AND zvuk při jízdě | 0.4 -> 0.7 AND zvuk od řetězu | 0.7 -> 0.8 AND zvuk při šlapání | 0.6 -> 0.5 AND skřípání | 0.5 -> 0.8 THEN promaž řetěz a vodící prvky | 0.4
+IF jedno z kol dělá zvuk | 0.5 -> 0.8 AND zvuk je slyšet v pravidelných intervalech | 0.8 -> 0.9 THEN vycentruj kolo | 0.7
+IF jedno z kol dělá zvuk | 0.5 -> 0.6 AND zvuk je slyšet konstantně | 0.6 -> 0.9 THEN kolo není správně zasazeno ve vidlici/rámu | 0.3
+
+#### problémy s brzdou
+#IF brzda nefunguje AND brzdová páka je při zmáčknutí volná THEN vyměň přetržené brzdové lanko
+#IF brzda nebrzdí AND brzdové špalky jsou staré THEN vyměněn brzdové špalky
+#IF brzda nebrzdí AND ráfek je mastný THEN odmasti mastný ráfek
+
 #### problémy s defektem
 #IF kolo je prázdné THEN duše je píchnutá
 #IF duše je píchnutá AND v plášti je trhlina THEN je potřeba vyměnit plášť a koupit novou duši
@@ -20,18 +39,3 @@
 #### DEBUG
 #IF a | 0.9 -> 0.6 AND b | 0.7 -> 0.65 THEN c | 0.5
 #IF b | 0.7 -> 0.85 AND e | 0.6 -> 0.8 THEN d | 0.7
-
-
-#### zvuky
-IF kolo vydává zvuk | 0.7 -> 0.08 AND zvuk při jízdě | 0.4 -> 0.1 AND zvuk jde od šlapacího středu | 0.1 -> 0.9 THEN promaž nebo vyměň ložiska ve šlapacím středu | 0.1
-IF kolo vydává zvuk | 0.7 -> 0.12 AND zvuk při brždění | 0.6 -> 0.2 AND brzdové špalky jsou staré | 0.3 -> 0.7 THEN vyměň brzdové špalky | 0.08
-IF kolo vydává zvuk | 0.7 -> 0.20 AND zvuk při brždění | 0.6 -> 0.8 AND brzdové špalky jsou špinavé | 0.7 -> 0.9 THEN umyj brzdové špalky | 0.92
-IF kolo vydává zvuk | 0.7 -> 0.40 AND zvuk při jízdě | 0.4 -> 0.6 AND zvuk jde od kola | 0.8 -> 0.9 THEN jedno z kol dělá zvuk | 0.40
-IF kolo vydává zvuk | 0.7 -> 0.20 AND zvuk při jízdě | 0.4 -> 0.7 AND zvuk od řetězu | 0.7 -> 0.8 AND zvuk při šlapání | 0.6 -> 0.5 AND skřípání | 0.5 -> 0.8 THEN promaž řetěz a vodící prvky | 0.4
-IF jedno z kol dělá zvuk | 0.5 -> 0.8 AND zvuk je slyšet v pravidelných intervalech | 0.8 -> 0.9 THEN vycentruj kolo | 0.7
-IF jedno z kol dělá zvuk | 0.5 -> 0.6 AND zvuk je slyšet konstantně | 0.6 -> 0.9 THEN kolo není správně zasazeno ve vidlici/rámu | 0.3
-
-#### problémy s brzdou
-#IF brzda nefunguje AND brzdová páka je při zmáčknutí volná THEN vyměň přetržené brzdové lanko
-#IF brzda nebrzdí AND brzdové špalky jsou staré THEN vyměněn brzdové špalky
-#IF brzda nebrzdí AND ráfek je mastný THEN odmasti mastný ráfek

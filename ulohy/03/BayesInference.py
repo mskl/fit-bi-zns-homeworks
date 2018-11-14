@@ -102,20 +102,20 @@ class ChatBot:
         Tell the user why I'm asking him this question.
         """
         if len(self.answered_true) > 0:
-            print("Uživatel odpověděl pravdivě na následující otázky: ")
+            print("*Uživatel odpověděl pravdivě na následující otázky: ")
             for i in self.answered_true:
-                print("-", i.name)
+                print("---", i.name)
         if len(self.implied_true) > 0:
-            print("Z nich vyplývá, že: ")
+            print("*Z nich vyplývá, že: ")
             for i in self.implied_true:
-                print("-", i.name)
-        print("Jsou celkem {} otázky, které mohou pomoci posunout se dál. Top {} z nich jsou: " \
+                print("--", i.name)
+        print("*Jsou celkem {} otázky, které mohou pomoci posunout se dál. Top {} z nich jsou: " \
               .format(len(current_data), min(len(current_data), 3)))
         for n in range(0, min(len(current_data), 3)):
-            print("-", current_data[n].name)
+            print("---", current_data[n].name)
         # possible improvement = count children
         print(
-            "Vybral jsem \"{}\" protože je na nejvyšším místě v grafu ({}) a její zodpovězení může odebrat {} přímých nejasností." \
+            "*Vybral jsem \"{}\" protože je na nejvyšším místě v grafu ({}) a její zodpovězení může odebrat {} přímých nejasností." \
             .format(current_data[0].name, current_data[0].height, len(current_data[0].edges_out)))
 
     def _explain(self, solution):
@@ -141,10 +141,10 @@ class ChatBot:
             response = self._post_question("Zobrazit všecha řešení " + str(len(self.explanations)) + " řešení? [y/*]: ")
             if response == "y":
                 limit = len(self.explanations)
-                print("Zobrazuji všech", len(self.explanations), "řešení.")
+                print("*Zobrazuji všech", len(self.explanations), "řešení.")
             else:
-                limit = 2
-                print("Zobrazuji nejlepší 2 řešení.")
+                limit = min(2, len(self.explanations))
+                print("*Zobrazuji nejlepší", limit, "řešení.")
         else:
             limit = len(self.explanations)
 
@@ -161,8 +161,8 @@ class ChatBot:
         self.explanations.sort(key=lambda x: x[2], reverse=True)
 
         # print all probabilities
-        for i in range(0, max(len(self.explanations), limit)):
-            print("Řešení", str(i) + ":", self.explanations[i][0].name, "s pravděpodobností:",
+        for i in range(0, limit):
+            print("-- Řešení", str(i) + ":", self.explanations[i][0].name, "s pravděpodobností:",
                   round(self.explanations[i][2], 5))
 
             if deep:
@@ -199,10 +199,10 @@ class ChatBot:
                 response_num = float(response)
 
                 if not (0 < response_num <= 1):
-                    self._post_answer("Zadané číslo není z intervalu (0, 1>.")
+                    self._post_answer("*Zadané číslo není z intervalu (0, 1>.")
                     return False
             except ValueError:
-                self._post_answer("Neznámá odpověď.")
+                self._post_answer("*Neznámá odpověď.")
                 return False
 
         """ Actions based on the response of the user: """
@@ -218,7 +218,7 @@ class ChatBot:
             # check if this node led to a solution
             solution = selected.get_solution()
             if solution is not None:
-                print("= Found a solution", solution.name)
+                print("*Found a solution", solution.name)
                 self.explanations.append(self._explain(solution))
 
             # traverse the graph and remove all descendants which do not rely only on this node
@@ -250,8 +250,10 @@ class ChatBot:
             # check if there are any nodes left in the graph
             if len(self.data_graph.nodes) == 0:
                 if len(self.explanations) == 0:
-                    self._post_answer("Neznám řešení tvého problému.")
-                    return True
+                    self._post_answer("*Neznám řešení tvého problému.")
+                else:
+                    self.end_bot()
+                return True
 
         elif response == "w":
             self._why(current_data)
@@ -260,21 +262,21 @@ class ChatBot:
             self.data_graph.graphviz_draw()
 
         else:
-            self._post_answer("Neznámá odpověď.")
+            self._post_answer("*Neznámá odpověď.")
 
         return False
 
 
 if __name__ == "__main__":
-    print("Bayesův znalostní systém opraváře kol nastartován.")
+    print("*Bayesův znalostní systém opraváře kol nastartován.")
 
     try:
         c = ChatBot()
     except Exception as e:
-        print("Inicialization of the chatbot failed with the error of:", str(e))
+        print("*Inicialization of the chatbot failed with the error of:", str(e))
         exit(0)
 
     while not c.ask():
         pass
 
-    print("Konec programu.")
+    print("*Konec programu.")

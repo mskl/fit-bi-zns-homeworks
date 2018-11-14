@@ -160,6 +160,7 @@ class Graph:
             # solve if middle node or last
             if len(other_node.edges_in) == 1:
                 other_node.p = other_node.ziskej_finalni_pst()
+                other_node.calculated = True
 
             if direct:
                 # remove only if it has 1 input, else it might be useful

@@ -13,6 +13,9 @@ class Node:
         self.height = 0
         self.name = name
 
+        # dummy flag is i ran
+        self.calculated = False
+
         # bayes system variables
         self.p = None      # probability
         self.Ls_ = []   # Array of L'
@@ -38,6 +41,9 @@ class Node:
         return o_h
 
     def ziskej_finalni_pst(self):
+        if self.calculated:
+            # print("This node was already calculated, current p is", self.p)
+            return self.p
         return self.P(self.nasobek_sanci(self.p, self.Ls_))
 
     def P_HE_(self, p_e, p_h, p_he, user_prob):
