@@ -108,7 +108,7 @@ class ChatBot:
         if len(self.implied_true) > 0:
             print("*Z nich vyplývá, že: ")
             for i in self.implied_true:
-                print("--", i.name)
+                print("---", i.name)
         print("*Jsou celkem {} otázky, které mohou pomoci posunout se dál. Top {} z nich jsou: " \
               .format(len(current_data), min(len(current_data), 3)))
         for n in range(0, min(len(current_data), 3)):
@@ -162,17 +162,17 @@ class ChatBot:
 
         # print all probabilities
         for i in range(0, limit):
-            print("-- Řešení", str(i) + ":", self.explanations[i][0].name, "s pravděpodobností:",
+            print("*Řešení", str(i) + ":", self.explanations[i][0].name, "s pravděpodobností:",
                   round(self.explanations[i][2], 5))
 
             if deep:
-                self.explanations[i][1].data_graph.graphviz_draw("Solution to:", self.explanations[i][0].name)
+                # self.explanations[i][1].data_graph.graphviz_draw("Solution to:", self.explanations[i][0].name)
                 self.explanations[i][1].data_graph.print_nice()
 
     def end_bot(self):
         self._final_explain()
 
-        res = self._post_question("Chceš vysvětlit, jak jsem došel k těmto závěrům? [y/*]: ")
+        res = self._post_question("*Chceš vysvětlit, jak jsem došel k těmto závěrům? [y/*]: ")
         if res == "y":
             self._final_explain(deep=True)
 

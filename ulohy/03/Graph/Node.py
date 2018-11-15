@@ -134,7 +134,6 @@ class Node:
             rstring += "Ls_: "
             for i in self.Ls_:
                 rstring += str(i) + ", "
-        rstring += " | calculated: " + str(self.ziskej_finalni_pst())
         return rstring
 
     def __str__(self):
