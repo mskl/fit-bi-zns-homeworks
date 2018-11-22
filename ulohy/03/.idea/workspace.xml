@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a28c99c-3fb2-4397-a317-653df4fd26c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BayesInference.py" beforeDir="false" afterPath="$PROJECT_DIR$/BayesInference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph/Node.py" beforeDir="false" afterPath="$PROJECT_DIR$/Graph/Node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usecases/stare_spalky.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/znalostni_baze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/znalostni_baze.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,10 +19,10 @@
     <session id="1666866323">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -63,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BayesInference.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="101" column="55" lean-forward="true" selection-start-line="101" selection-start-column="55" selection-end-line="101" selection-end-column="55" />
+            <state relative-caret-position="424">
+              <caret line="111" column="72" lean-forward="true" selection-start-line="111" selection-start-column="72" selection-end-line="111" selection-end-column="72" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
                 <marker date="1542234528539" expanded="true" signature="6198:6396" ph="..." />
@@ -85,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graph/Graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="238" column="24" lean-forward="true" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
+            <state relative-caret-position="3525">
+              <caret line="238" column="24" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -97,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graph/Edge.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="79" column="76" lean-forward="true" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
+            <state relative-caret-position="1185">
+              <caret line="79" column="76" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -106,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graph/Node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
+            <state relative-caret-position="2025">
               <caret line="135" column="40" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
               <folding>
                 <marker date="1542234371371" expanded="true" signature="536:631" ph="..." />
@@ -156,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,6 +171,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,7 +263,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50190115" side_tool="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -310,6 +309,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BayesInference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="111" column="72" lean-forward="true" selection-start-line="111" selection-start-column="72" selection-end-line="111" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1542234528539" expanded="true" signature="6198:6396" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/znalostni_baze.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -319,8 +329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph/Graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="238" column="24" lean-forward="true" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
+        <state relative-caret-position="3525">
+          <caret line="238" column="24" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -329,29 +339,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph/Edge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="79" column="76" lean-forward="true" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
+        <state relative-caret-position="1185">
+          <caret line="79" column="76" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph/Node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
+        <state relative-caret-position="2025">
           <caret line="135" column="40" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
           <folding>
             <marker date="1542234371371" expanded="true" signature="536:631" ph="..." />
             <marker date="1542234371371" expanded="true" signature="662:667" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BayesInference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="101" column="55" lean-forward="true" selection-start-line="101" selection-start-column="55" selection-end-line="101" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <marker date="1542234528539" expanded="true" signature="6198:6396" ph="..." />
           </folding>
         </state>
       </provider>
