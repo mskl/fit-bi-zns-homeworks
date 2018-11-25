@@ -1,4 +1,3 @@
-from Fuzzy.BagOfTerms import BagOfTerms
-from Fuzzy.Clause import Clause
-from Fuzzy.Term import Term
-from Fuzzy.Fuzzy import Fuzzy
+from fuzzy_universe import FuzzyUniverse
+from fuzzy_system import FuzzySystem
+from fuzzy_rule import FuzzyRule

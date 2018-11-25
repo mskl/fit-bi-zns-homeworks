@@ -3,6 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Fuzzy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Token" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fuzzy/Term" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fuzzy/Function" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
