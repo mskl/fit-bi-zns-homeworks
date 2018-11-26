@@ -1,1 +1,1 @@
-from trap_mf import TrapMF
+from .trap_mf import TrapMF

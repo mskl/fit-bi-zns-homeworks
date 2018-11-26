@@ -1,5 +1,0 @@
-filmy IS Mizerná    AND av IS   Mizerná         THEN kino IS Hrůza
-filmy IS Mizerná    AND av IS   NOT Mizerná     THEN kino IS Průměr
-filmy IS Dobrá      AND av IS   Mizerná         THEN kino IS Průměr
-filmy IS Vynikající AND av IS   NOT Vynikající  THEN kino IS Dobré
-filmy IS Vynikající AND av IS   Vynikající      THEN kino IS Paráda
