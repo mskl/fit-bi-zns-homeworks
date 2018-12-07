@@ -1,27 +1,25 @@
 from Fuzzy import FuzzyUniverse, FuzzyRule, FuzzySystem
-from Fuzzy.Function import TrapMF
+import Fuzzy.Function as Function
 from Fuzzy.Term import Term
-import numpy as np
-import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
     # univerza předpokladů
     filmy = FuzzyUniverse(0, 10, 'Kvalita filmů')
-    filmy["Mizerná"] = Term(TrapMF(0, 0, 2, 4))
-    filmy["Dobrá"] = Term(TrapMF(3, 4, 7, 8))
-    filmy["Vynikající"] = Term(TrapMF(6, 8, 10, 10))
+    filmy["Mizerná"] = Term(Function.TrapMF(0, 0, 2, 4))
+    filmy["Dobrá"] = Term(Function.TrapMF(3, 4, 7, 8))
+    filmy["Vynikající"] = Term(Function.TrapMF(6, 8, 10, 10))
 
     av = FuzzyUniverse(0, 10, 'Kvalita AV')
-    av["Mizerná"] = Term(TrapMF(0, 0, 2, 4))
-    av["Dobrá"] = Term(TrapMF(3, 4, 6, 7))
-    av["Vynikající"] = Term(TrapMF(6, 8, 10, 10))
+    av["Mizerná"] = Term(Function.TrapMF(0, 0, 2, 4))
+    av["Dobrá"] = Term(Function.TrapMF(3, 4, 6, 7))
+    av["Vynikající"] = Term(Function.TrapMF(6, 8, 10, 10))
 
     # univerzum výsledků, fce příslušnosti pro výsledek ~ počty množin nemusejí být stejné
     kino = FuzzyUniverse(0, 10, 'Hodnocení kina')
-    kino['Hrůza'] = Term(TrapMF(0, 0, 1, 3))
-    kino['Průměr'] = Term(TrapMF(2, 3, 6, 7))
-    kino['Dobré'] = Term(TrapMF(6, 7, 8, 9))
-    kino['Paráda'] = Term(TrapMF(8, 9, 10, 10))
+    kino['Hrůza'] = Term(Function.TrapMF(0, 0, 1, 3))
+    kino['Průměr'] = Term(Function.TrapMF(2, 3, 6, 7))
+    kino['Dobré'] = Term(Function.TrapMF(6, 7, 8, 9))
+    kino['Paráda'] = Term(Function.TrapMF(8, 9, 10, 10))
 
     # filmy.view()
     # av.view()

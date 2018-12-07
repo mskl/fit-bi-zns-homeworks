@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cfb5a62-f593-426d-a9dc-e1229965ed90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/knowledge_base.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuzzyRuleset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usecases/horsi_stavba_trati_jinak_prumer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usecases/horsi_trate_prumer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usecases/obstojna_mapa.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usecases/velmi_dobre.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/matya.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/matya.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fuzzy/Function/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fuzzy/Function/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fuzzy/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fuzzy/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Token/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Token/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/znalostni_baze.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fuzzy/Term/term_aggregate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fuzzy/Term/term_aggregate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fuzzy/fuzzy_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fuzzy/fuzzy_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fuzzy/fuzzy_universe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fuzzy/fuzzy_universe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FuzzyLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/FuzzyLogic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FuzzyTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/FuzzyTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParseJson.ipynb" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,52 +24,56 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/04$FuzzyLogic.coverage" NAME="FuzzyLogic Coverage Results" MODIFIED="1543074686139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/04$FuzzyLogic.coverage" NAME="FuzzyLogic Coverage Results" MODIFIED="1544053854569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/04$FuzzyTestOB.coverage" NAME="FuzzyTestOB Coverage Results" MODIFIED="1543778408488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/04$BagOfTerms.coverage" NAME="BagOfTerms Coverage Results" MODIFIED="1543074370955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fuzzy" />
-    <SUITE FILE_PATH="coverage/04$FuzzyTest.coverage" NAME="FuzzyTest Coverage Results" MODIFIED="1543116429176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/04$FuzzyTest.coverage" NAME="FuzzyTest Coverage Results" MODIFIED="1543785595255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1470352795">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="3" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ipynb" value="3" />
-          <entry key="json" value="3" />
-          <entry key="py" value="80" />
-          <entry key="txt" value="3" />
+          <entry key="FuzzyRuleset" value="1" />
+          <entry key="ipynb" value="5" />
+          <entry key="json" value="4" />
+          <entry key="py" value="93" />
+          <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="IPNB" value="3" />
-          <entry key="JSON" value="3" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="80" />
+          <entry key="IPNB" value="5" />
+          <entry key="JSON" value="4" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="93" />
+          <entry key="UML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="186" />
-          <entry key="dummy" value="232" />
+          <entry key="dummy" value="251" />
           <entry key="json" value="100" />
-          <entry key="py" value="13633" />
-          <entry key="txt" value="76" />
+          <entry key="py" value="18267" />
+          <entry key="txt" value="344" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="100" />
-          <entry key="PLAIN_TEXT" value="308" />
-          <entry key="Python" value="13819" />
+          <entry key="PLAIN_TEXT" value="595" />
+          <entry key="Python" value="18453" />
         </counts>
       </usages-collector>
     </session>
@@ -69,32 +81,54 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge_base.json">
+        <entry file="file://$PROJECT_DIR$/FuzzyRuleset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
-              <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_system.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+            <state relative-caret-position="105">
+              <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1543116420873" expanded="true" signature="70:71" ph="..." />
+                <element signature="e#0#55#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FuzzyTest.py">
+        <entry file="file://$PROJECT_DIR$/usecases/velmi_dobre.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="75">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_system.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1544091885722" expanded="true" signature="70:71" ph="..." />
+                <marker date="1544091885722" expanded="true" signature="2195:2362" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/FuzzyTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FuzzyLogic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -105,31 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_rule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_universe.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1543115319418" expanded="true" signature="103:104" ph="..." />
-                <marker date="1543115319418" expanded="true" signature="1469:1475" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Fuzzy/Term/term.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="255">
+              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -153,6 +164,8 @@
       <find>term1</find>
       <find>= TrapMF</find>
       <find>rating_function</find>
+      <find>Dobré</find>
+      <find>.*:</find>
     </findStrings>
     <replaceStrings>
       <replace>Fuzzy</replace>
@@ -176,7 +189,6 @@
         <option value="$PROJECT_DIR$/Fuzzy/BagOfTerms.py" />
         <option value="$PROJECT_DIR$/Fuzzy/Term.py" />
         <option value="$PROJECT_DIR$/Fuzzy/BagOfTokens.py" />
-        <option value="$PROJECT_DIR$/FuzzyLogic.py" />
         <option value="$PROJECT_DIR$/Token/BagOfTokens.py" />
         <option value="$PROJECT_DIR$/Fuzzy/FuzzyVariable.py" />
         <option value="$PROJECT_DIR$/Fuzzy/visualization.py" />
@@ -193,17 +205,26 @@
         <option value="$PROJECT_DIR$/Fuzzy/term_aggregate.py" />
         <option value="$PROJECT_DIR$/Fuzzy/Term/__init__.py" />
         <option value="$PROJECT_DIR$/Fuzzy/Term/term.py" />
-        <option value="$PROJECT_DIR$/Fuzzy/Term/term_aggregate.py" />
         <option value="$PROJECT_DIR$/Fuzzy/fuzzy_rule.py" />
-        <option value="$PROJECT_DIR$/Fuzzy/fuzzy_universe.py" />
-        <option value="$PROJECT_DIR$/Fuzzy/fuzzy_system.py" />
-        <option value="$PROJECT_DIR$/FuzzyTest.py" />
         <option value="$PROJECT_DIR$/znalostni_baze.txt" />
         <option value="$PROJECT_DIR$/Fuzzy/__init__.py" />
         <option value="$PROJECT_DIR$/Token/__init__.py" />
         <option value="$PROJECT_DIR$/Fuzzy/Function/__init__.py" />
         <option value="$PROJECT_DIR$/knowledge_base.json" />
         <option value="$PROJECT_DIR$/knowledge_base.py" />
+        <option value="$PROJECT_DIR$/FuzzyTest.py" />
+        <option value="$PROJECT_DIR$/Fuzzy/Term/term_aggregate.py" />
+        <option value="$PROJECT_DIR$/Fuzzy/fuzzy_universe.py" />
+        <option value="$PROJECT_DIR$/FuzzyTestOB.py" />
+        <option value="$PROJECT_DIR$/Fuzzy/Function/trap_mf.py" />
+        <option value="$PROJECT_DIR$/FuzzyLogic.py" />
+        <option value="$PROJECT_DIR$/temp.txt" />
+        <option value="$PROJECT_DIR$/usecases/horsi_stavba_trati_jinak_prumer.txt" />
+        <option value="$PROJECT_DIR$/usecases/horsi_trate_prumer.txt" />
+        <option value="$PROJECT_DIR$/usecases/obstojna_mapa.txt" />
+        <option value="$PROJECT_DIR$/usecases/velmi_dobre.txt" />
+        <option value="$PROJECT_DIR$/FuzzyRuleset.py" />
+        <option value="$PROJECT_DIR$/Fuzzy/fuzzy_system.py" />
       </list>
     </option>
   </component>
@@ -240,6 +261,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,16 +269,10 @@
               <item name="04" type="b2602c69:ProjectViewProjectNode" />
               <item name="04" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="04" type="b2602c69:ProjectViewProjectNode" />
-              <item name="04" type="462c0819:PsiDirectoryNode" />
-              <item name="Fuzzy" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,11 +284,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Test" />
       <recent name="$PROJECT_DIR$/Fuzzy/Function" />
       <recent name="$PROJECT_DIR$/Fuzzy/Term" />
       <recent name="$PROJECT_DIR$/Token" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Fuzzy" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -287,7 +303,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.FuzzyTest">
+  <component name="RunManager" selected="Python.FuzzyLogic">
     <configuration name="BagOfTerms" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="04" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -345,7 +361,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FuzzyTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/FuzzyTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FuzzyTestOB" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="04" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FuzzyRuleset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -358,11 +396,13 @@
       <item itemvalue="Python.BagOfTerms" />
       <item itemvalue="Python.FuzzyLogic" />
       <item itemvalue="Python.FuzzyTest" />
+      <item itemvalue="Python.FuzzyTestOB" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.FuzzyTest" />
         <item itemvalue="Python.FuzzyLogic" />
+        <item itemvalue="Python.FuzzyTest" />
+        <item itemvalue="Python.FuzzyTestOB" />
         <item itemvalue="Python.BagOfTerms" />
       </list>
     </recent_temporary>
@@ -384,27 +424,27 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19170243" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17381974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64806867" weight="0.22650602" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.56151646" weight="0.3180723" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.35193133" side_tool="true" weight="0.39518073" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32891566" />
+      <window_info anchor="bottom" id="SciView" order="10" sideWeight="0.43848354" side_tool="true" weight="0.3180723" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.35193133" side_tool="true" weight="0.39518073" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.2274678" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,20 +473,6 @@
             <marker date="1543106049726" expanded="true" signature="31:100" ph="..." />
             <marker date="1543106049726" expanded="true" signature="243:274" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/axes/_axes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5315">
-          <caret line="534" lean-forward="true" selection-start-line="534" selection-end-line="534" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FuzzyLogic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -536,24 +562,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Fuzzy/Function/trap_mf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Fuzzy/Term/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fuzzy/Term/term_aggregate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -575,71 +587,170 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/znalostni_baze.txt" />
     <entry file="file://$PROJECT_DIR$/knowledge_base.py" />
-    <entry file="file://$PROJECT_DIR$/FuzzyTest.py">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1199943127/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="152">
+          <caret line="2797" column="8" selection-start-line="2797" selection-start-column="8" selection-end-line="2797" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/axes/_axes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="4792" selection-start-line="4792" selection-end-line="4792" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="1897" selection-start-line="1897" selection-end-line="1897" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="2999" selection-start-line="2999" selection-end-line="2999" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fuzzy/Term/term_aggregate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="30" lean-forward="true" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fuzzy/Function/trap_mf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fuzzy/Term/term.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/FuzzyRuleset.FuzzyRuleset">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>FuzzyRuleset.FuzzyRuleset</OriginalElement>
+          <nodes>
+            <node x="" y="">FuzzyRuleset.FuzzyRuleset</node>
+            <node x="" y="">object</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="100.0" y="55.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_universe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1543772083979" expanded="true" signature="103:104" ph="..." />
+            <marker date="1543772083979" expanded="true" signature="1471:1477" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usecases/spatny_prostor.txt" />
+    <entry file="file://$PROJECT_DIR$/temp.txt" />
+    <entry file="file://$PROJECT_DIR$/ParseJson.ipynb" />
+    <entry file="file://$PROJECT_DIR$/knowledge_base.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usecases/obstojna_mapa.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usecases/horsi_trate_prumer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usecases/horsi_stavba_trati_jinak_prumer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usecases/velmi_dobre.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_rule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FuzzyLogic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_rule.py">
+    <entry file="file://$PROJECT_DIR$/FuzzyRuleset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="105">
+          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Fuzzy/Term/term.py">
+    <entry file="file://$PROJECT_DIR$/Test/FuzzyTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParseJson.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge_base.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_system.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        <state relative-caret-position="468">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1543116420873" expanded="true" signature="70:71" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_universe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1543115319418" expanded="true" signature="103:104" ph="..." />
-            <marker date="1543115319418" expanded="true" signature="1469:1475" ph="..." />
+            <marker date="1544091885722" expanded="true" signature="70:71" ph="..." />
+            <marker date="1544091885722" expanded="true" signature="2195:2362" ph="..." />
           </folding>
         </state>
       </provider>

@@ -7,6 +7,18 @@ class TermAggregate:
         self.func2 = term2
         self.kind = kind
 
+    def __and__(self, other):
+        """ movie['Good'] & equipment['Bad'] """
+        return TermAggregate(self, other, 'and')
+
+    def __or__(self, other):
+        """ movie['Good'] | equipment['Bad'] """
+        return TermAggregate(self, other, 'or')
+
+    def __invert__(self):
+        """ ~movie['Good'] """
+        return TermAggregate(self, None, 'not')
+
     def __getitem__(self, x):
         """ Evaluate the function in any given point x """
         # x ∧ y → min(x, y)

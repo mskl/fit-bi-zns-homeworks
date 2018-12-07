@@ -48,28 +48,45 @@ class FuzzySystem:
 
         return result_rule_list
 
-    def generate_centroid(self, solution_universe, integral_count=1000, show_graph=False):
+    def generate_centroid(self, solution_universe, integral_count=10000, show_graph=False):
         """ Calculate the centroid and optionally show the graph """
-        function_points = np.linspace(solution_universe.universe_min,
-                                      solution_universe.universe_max,
-                                      endpoint=True, num=integral_count)
         centroid = 0
-        function_results = []
+        x = np.linspace(solution_universe.universe_min,solution_universe.universe_max, endpoint=True, num=integral_count)
+        y = []
 
+        integral_width = (solution_universe.universe_max - solution_universe.universe_min) / integral_count
         evaluated_rules = self.evaluate_rules()
-        for p in function_points:
-            max_function_value = 0
-            for rule, rule_evaluate in evaluated_rules:
-                max_function_value = max(max_function_value, min(rule_evaluate, rule.solution[p]))
-            centroid += max_function_value * p
-            function_results.append(max_function_value)
 
-        centroid /= integral_count / 2
+        def integral_value(_x, _evaluated_rules):
+            _y = 0
+            for rule, rule_evaluate in _evaluated_rules:
+                _y = max(_y, min(rule_evaluate, rule.solution[_x]))
+            return _y
+
+        mo = ar = 0
+        for _x in x:
+            integrated_val_0 = integral_value(_x, evaluated_rules)
+            integrated_val_1 = integral_value(_x + integral_width, evaluated_rules)
+            y.append(integrated_val_0)
+
+            if (integrated_val_0 != 0) and (integrated_val_1 != 0):
+                _ar = integral_width * (integrated_val_0 + integrated_val_1) / 2
+                _mo = _x + integral_width / 2
+
+                mo += _mo * _ar
+                ar += _ar
+
+        try:
+            centroid = mo / ar
+        except Exception as ex:
+            centroid = 5
 
         if show_graph:
             fig, ax = solution_universe.get_plot()
-            ax.plot(function_points, function_results)
-            plt.fill(function_points, function_results, alpha=0.5, color="red")
+
+            plt.fill_between(x, 0, y, alpha=0.5, color="red")
+            plt.plot(x, y, color="black")
+
             ax.grid()
             plt.axvline(x=centroid, color="black")
             plt.legend(loc='best')

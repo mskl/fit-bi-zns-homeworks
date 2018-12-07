@@ -37,7 +37,7 @@ class FuzzyUniverse(TokenizedObject):
         ax.set_ylim([0, 1.05])
         ax.set(title='Fuzzy univerzum -  {}'.format(self.name))
 
-        x_ticks = np.linspace(self.universe_min, self.universe_max, num=11, endpoint=True)
+        x_ticks = np.linspace(self.universe_min, self.universe_max, num=1000, endpoint=True)
         for key, func in self.terms.items():
             function_values = []
             for x in x_ticks:
