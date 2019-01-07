@@ -20,7 +20,7 @@ Uncertainty based on the PROSPECTOR-based approach. Quite messy as I was applyin
 ### Fuzzy logic (10/10)
 > Create a fuzzy logic inference system.
 
-I created a fuzzy logic system to rate the races. Some implementation ideas came from the SKlearn fuzzy logic module, but highly simplified.
+I created a fuzzy logic system to rate orienteering races in different criteria. Some implementation ideas came from the SKlearn fuzzy logic module, but highly simplified.
 
 ### NeuralNetwork + knowledge extraction to a tree with TREPAN algorithm (0/15)
 
