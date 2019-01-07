@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cfb5a62-f593-426d-a9dc-e1229965ed90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FuzzyRuleset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usecases/horsi_stavba_trati_jinak_prumer.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usecases/horsi_trate_prumer.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usecases/obstojna_mapa.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usecases/velmi_dobre.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/matya.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/matya.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fuzzy/Term/term_aggregate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fuzzy/Term/term_aggregate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fuzzy/fuzzy_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fuzzy/fuzzy_system.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fuzzy/fuzzy_universe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fuzzy/fuzzy_universe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FuzzyLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/FuzzyLogic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FuzzyTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/FuzzyTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParseJson.ipynb" beforeDir="false" />
-    </list>
+    <list default="true" id="2cfb5a62-f593-426d-a9dc-e1229965ed90" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +18,13 @@
     <session id="1470352795">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.5" value="5" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FuzzyRuleset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+            <state relative-caret-position="75">
+              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -104,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_system.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="348">
+              <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <marker date="1544091885722" expanded="true" signature="70:71" ph="..." />
@@ -119,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/Test/FuzzyTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+              <caret column="38" selection-start-column="38" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -127,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FuzzyLogic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
+            <state relative-caret-position="930">
               <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
@@ -140,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_rule.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -423,8 +408,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17381974" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17596567" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -468,11 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <marker date="1543106049726" expanded="true" signature="31:32" ph="..." />
-            <marker date="1543106049726" expanded="true" signature="31:100" ph="..." />
-            <marker date="1543106049726" expanded="true" signature="243:274" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -592,13 +573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/znalostni_baze.txt" />
     <entry file="file://$PROJECT_DIR$/knowledge_base.py" />
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1199943127/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="2797" column="8" selection-start-line="2797" selection-start-column="8" selection-end-line="2797" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1199943127/builtins.py" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/axes/_axes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-308">
@@ -663,11 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="27" column="22" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1543772083979" expanded="true" signature="103:104" ph="..." />
-            <marker date="1543772083979" expanded="true" signature="1471:1477" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,6 +672,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FuzzyRuleset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/usecases/velmi_dobre.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -709,16 +689,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_rule.py">
+    <entry file="file://$PROJECT_DIR$/Test/FuzzyTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FuzzyLogic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
+        <state relative-caret-position="930">
           <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
@@ -726,27 +706,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FuzzyRuleset.py">
+    <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_rule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/FuzzyTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+        <state relative-caret-position="255">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Fuzzy/fuzzy_system.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="348">
+          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <marker date="1544091885722" expanded="true" signature="70:71" ph="..." />
